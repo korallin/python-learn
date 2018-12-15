@@ -1,22 +1,26 @@
-# Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um
-# triângulo retângulo, calcule e mostre o comprimeito da hipotenusa.
+class NetFlix:
+	def __init__(self):
+		self.url = 'https://www.netflix.com/br/login'
+		self.usuario = 'rafael.dantas.monje@outlook.com'
+		self.Senha = '17541754'		
+		self.elementUsuario = 'userLoginId'
+		self.elementSenha = 'password'
+		self.elementosEditText = [{'field':self.elementUsuario, 'conteudo':self.usuario},
+		                          {'field':self.elementSenha, 'conteudo':self.Senha}]			 
 
-print('Programa que calcula a hipotenusa')
+	def constUrl(self):
+		return self.url	
 
-catetoOposto = float(input('Favor informar o cateto oposto: '))
-catetoAdjacente = float(input('Favor informar o cateto adjacente: '))
+	def constElementUsuario(self):
+		return self.elementUsuario
 
-from math import sqrt, trunc, hypot
+	def constElementSenha(self):
+		return self.elementSenha		
 
-#a² + b² = c²
-hipotenusa = sqrt(catetoOposto**2 + catetoAdjacente**2)
-print(trunc(hipotenusa))
-hipotenusa = (catetoOposto**2 + catetoAdjacente**2)**(1/2)
-print(trunc(hipotenusa))
-hipotenusa=hypot(catetoOposto,catetoAdjacente)
-print(hipotenusa)
+	def constElementosEditText(self):
+		print (type(self.elementosEditText))
+		return self.elementosEditText		
 
-print('O comprimento da hipotenusa é: {}.'.format(
-      sqrt(catetoOposto**2 + catetoAdjacente**2))
-     )
-
+	#UsuarioTeste
+	def constUsuario(self):
+		return self.usuar

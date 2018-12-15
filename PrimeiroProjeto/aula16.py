@@ -1,60 +1,14 @@
-#Tuplas
-
-#Listas
-
-#Dicionarios
-
-#Aula de Tupla
-
-#lanche = () [] {} tupla, lista, dicionario
-from builtins import enumerate
-
-lanche = ('Hamburger','Suco','Pizza','Pudim')
-print(lanche)
-
-print(lanche[1])
-
-print(lanche[-1])
-
-print(lanche[1:3])
-
-print(lanche[2:])
-
-print(lanche[:2])
-
-print(lanche[-3])
-
-print(lanche)
-
-#tuplas são imutaveis
-
-#lanche[1]='Refigerante'
-#print(lanche[1]) - Tupla não aceita receber diremente pelo elemento
-
-print(len(lanche))
-
-for comida in lanche:
-    print(f'Eu vou comer {comida}')
-print('Comi pra carabma!')
-
-for cont in range(0,len(lanche))
-    print(lanche[cont])
-print('Comi pra carabma!')
-
-for comida in enumerate(lanche):
-    print(f'Eu vou comer {comida} na posição{pos}')
-print('Comi pra caramba.')
-
-print(sorted(lanche))
-
-a = (2,5,4)
-b = (5,8,1,2)
-c=a+b
-print(c)
-
-print(c.count(5))
+, messages will be lost
 
 
-print(c.index(2))
+###!!! [Child][MessageChannel] Error: (msgtype=0x3000BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
 
-print(c.index(2:5))
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1541036774612	Marionette	INFO	Stopped listening on port 46303
+[Parent 3362, Gecko_IOThread] WARNING: pipe error (64): Ligação terminada no destino: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+1541037210698	Marionette	INFO	Stopped listening on port 39073
+1541037769656	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.yRSrfIfXixeU"
+
+(firefox:4094): Gtk-WARNING **: 23:02:51.834: Theme parsing error: <data>:1:34: Expected ')' in color def

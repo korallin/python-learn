@@ -1,24 +1,24 @@
-class LerCampos():
-	"""Classe que irá ler o arquivo com o usuário de senha do acesso do site"""
-	def __init__(self):		
-		self.arquivo = open('/home/home/Transferências/MapFace.txt')
-		self.campos = list()
-		self.submit = None
+class NetFlix:
+	def __init__(self):
+		self.url = 'https://www.netflix.com/br/login'
+		self.usuario = 'rafael.dantas.monje@outlook.com'
+		self.Senha = '17541754'		
+		self.elementUsuario = 'userLoginId'
+		self.elementSenha = 'password'
+		self.elementosEditText = [{'field':self.elementUsuario, 'conteudo':self.usuario},
+		                          {'field':self.elementSenha, 'conteudo':self.Senha}]			 
 
-	def CarregarDados(self):		
-		for line in self.arquivo:			
-			if line[4] == 'D':
-				if line[75:(75+10)].strip() == 'EDIT':					
-					self.campos.append(line[30:(30+45)].strip())
-					print(self.campos,'campo')
-				elif line[75:(75+10)].strip() == 'SUBMIT':					
-					self.submit(line[30:(30+45)].strip())
-					print(self.submit,'submit')
+	def constUrl(self):
+		return self.url	
 
-	def PegarCampos(self):
-		self.CarregarDados()
-		return self.campos		
+	def constElementUsuario(self):
+		return self.elementUsuario
 
+	def constElementSenha(self):
+		return self.elementSenha		
 
-ler = LerCampos()
-ler.PegarCampos()		
+	def constElementosEditText(self):
+		print (type(self.elementosEditText))
+		return self.elementosEditText		
+
+	#Us

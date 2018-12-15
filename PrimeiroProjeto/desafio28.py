@@ -1,17 +1,25 @@
-#Escreva um programa que faça o compuutador pensar em um número inteiro entre 0 e 5 e peça para o usuario tentar descobir qual foi o número escolhido pelo computador.
-#O programa deverá escrever na tela se o usuário venceu ou perdu.
+class NetFlix:
+	def __init__(self):
+		self.url = 'https://www.netflix.com/br/login'
+		self.usuario = 'rafael.dantas.monje@outlook.com'
+		self.Senha = '17541754'		
+		self.elementUsuario = 'userLoginId'
+		self.elementSenha = 'password'
+		self.elementosEditText = [{'field':self.elementUsuario, 'conteudo':self.usuario},
+		                          {'field':self.elementSenha, 'conteudo':self.Senha}]			 
 
-print('Eu sou um computador pensante! Pensei em um número de 0 à 5, tente descobri-lo.')
+	def constUrl(self):
+		return self.url	
 
-from random import randint
-numeroPensado = randint(0,5)
+	def constElementUsuario(self):
+		return self.elementUsuario
 
-numeroUsuario = int(input('Faça sua tentativa, informe um número: '))
+	def constElementSenha(self):
+		return self.elementSenha		
 
-if numeroPensado == numeroUsuario:
-    print('Você acertou o número pensado pelo computador. ')
-else:
-    print('Infelizmente você não acertou. Mais sorte na próxima vez.')
+	def constElementosEditText(self):
+		print (type(self.elementosEditText))
+		return self.elementosEditText		
 
-print('Você acertou!' if numeroUsuario==numeroPensado else 'Deu ruim!')
-
+	#UsuarioTeste
+	def constUsuario(self):
