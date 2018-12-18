@@ -2,8 +2,8 @@ from PIL import Image
 
 import pytesseract 
 
-endereco = '/home/work/Downloads/Conciliao61.jpg'
-
+endereco = '/home/work/Downloads/comprovante.jpg'
+	
 
 
 
