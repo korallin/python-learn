@@ -5,7 +5,7 @@ from PIL import Image
 
 
 class DllImagemTexto():
-	def __init__(self, path) 
+	def __init__(self, path):
 		self.path = path
 
 		try:
