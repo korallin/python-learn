@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from PIL import Image
 
-path = 'C:\GED_IMAGEM\ENTRADASCANNER.jpg'
+path = 'C:\\GED_IMAGEM\\ENTRADASCANNER.jpg'
 
 try:
     # tipando a leitura para os canais de ordem RGB
@@ -49,7 +49,9 @@ try:
     arquivo.close
 
 except Exception as e:
-    pass
+    log = open('C:\\GED_IMAGEM\\ENTRADASCANNER.jpg','w')
+    log.write('Erro:' + e.text)
+    log.close
 else:
     pass
 finally:
