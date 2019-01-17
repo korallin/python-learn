@@ -3,7 +3,19 @@ import numpy as np
 import cv2
 from PIL import Image
 
-path = 'C:\\GED_IMAGEM\\ENTRADASCANNER.jpg'
+log = open('C:/GED_IMAGEM/LogScanner.txt','w')
+
+log.write('INICIANDO LEITURA DO ARQUIVO CONFIG.ini - ')
+
+config = open('C:/GED_IMAGEM/CONFIG.txt','r')
+line = config.readline()
+ini = line[10:]
+log.write('PATH:'+ini)
+config.close()
+
+log.write('CARREGANDO IMAGEM - ')
+
+path = 'C:/GED_IMAGEM/ENTRADASCANNER.jpg'
 
 try:
     # tipando a leitura para os canais de ordem RGB
@@ -16,7 +28,7 @@ try:
             enderecoArquivo = path[:i+1]
             break
 
-    print(enderecoArquivo)		
+    log.write('ENDERECO CAPTURADO:'+enderecoArquivo+' - ')
 
     # convertendo em um array editável de numpy[x, y, CANALS]
     npimagem = np.asarray(imagem).astype(np.uint8)  
@@ -37,6 +49,9 @@ try:
     # reconvertendo o retorno do threshold em um objeto do tipo PIL.Image
     binimagem = Image.fromarray(thresh) 
 
+    log.write('INICIANDO TESSERACT - ')
+    ocr.pytesseract.tesseract_cmd = ini
+
     # chamada ao tesseract OCR por meio de seu wrapper
     phrase = ocr.image_to_string(binimagem, lang='por')
 
@@ -46,13 +61,12 @@ try:
 
     arquivo = open(name,'w')
     arquivo.write(phrase.strip())
-    arquivo.close
+    arquivo.close()
 
 except Exception as e:
-    log = open('C:\\GED_IMAGEM\\ENTRADASCANNER.jpg','w')
-    log.write('Erro:' + e.text)
-    log.close
+    log.write('Erro:' + e.text
+    log.close()
 else:
     pass
 finally:
-    pass	
+    log.close()	
