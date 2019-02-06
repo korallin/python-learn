@@ -17,7 +17,6 @@ print(user + ' - ' + passw)
 driver = (ini) 
 browser = webdriver.Chrome(driver)
 
-#browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp')
 browser.get('http://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=GotoView&SWEView=VIVO+Contas+Detail+-+Contacts+View&SWERF=1&SWEHo=vivocorp-parceiro.vivo.com.br&SWEBU=1')
 browser.find_element_by_name('username').send_keys('80053926')
 
@@ -25,10 +24,12 @@ time.sleep(3)
 
 browser.find_element_by_name('password').send_keys('Stcbr@26')
 browser.find_element_by_class_name('button').click()
-
+'''
 time.sleep(3)
 
 browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=Login&SWEPL=1&_sn=kTuq3U-.'+
             'yAskPIqVpdOZySgYP5A6dpFZNfShfscSl5lE42eExFp.qh0BQCM6Y5IBTVHpv9Ve.YVK7TlDYIF8rSlv45o.L3-BAgHTLN'+
             '9DA1UWMaXfth22IJZurNPI4pt-MznBdEgdb4-bP1OzpLjdrkpB4EwtggLUo-zHRLtes5n4Ha74D1ztFDRHt7ahVu4Ywr0z'+
             'G96iYSk_&SRN=K1gekGBBjDd2PK6mmPP8IhvLCopcVSAuJZ10utLGhJ0b&SWETS=')
+'''
+browser.submit()
