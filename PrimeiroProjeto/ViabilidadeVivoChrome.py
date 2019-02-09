@@ -33,3 +33,15 @@ browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd
             'G96iYSk_&SRN=K1gekGBBjDd2PK6mmPP8IhvLCopcVSAuJZ10utLGhJ0b&SWETS=')
 '''
 browser.submit()
+
+browser.find_element_by_xpath('/html/body/div[1]/div/div[4]/div/div/div[1]/div[1]/ul/li[3]').click()
+
+browser.find_element_by_xpath('/html/body/div[1]/div/div[4]/div/div/div[1]/div[2]/ul/li[3]').click()
+
+browser.find_element_by_id('s_1_1_16_0_Ctrl').click()
+
+browser.find_element_by_xpath('//*[@id="1_s_1_l_VIVO_Documento"]').click()
+
+browser.find_element_by_xpath('//*[@id="1_VIVO_Documento"]').send_keys('08661552605') 
+
+browser.find_element_by_id('s_1_1_8_0_Ctrl').click()
