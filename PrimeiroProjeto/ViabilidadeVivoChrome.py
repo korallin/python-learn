@@ -34,14 +34,51 @@ browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd
 '''
 browser.submit()
 
+#browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=GotoView&SWEView=VIVO+Hierarquia+de+Contas&SWERF=1&SWEHo=vivocorp-parceiro.vivo.com.br&SWEBU=1#s_sctrl_tabView_noop')
+#Aba Contas
 browser.find_element_by_xpath('/html/body/div[1]/div/div[4]/div/div/div[1]/div[1]/ul/li[3]').click()
-
+#Sub Aba Hierarquia
 browser.find_element_by_xpath('/html/body/div[1]/div/div[4]/div/div/div[1]/div[2]/ul/li[3]').click()
-
+#Aba Botao Pesquisar
 browser.find_element_by_id('s_1_1_16_0_Ctrl').click()
-
+#Aba Fiedl CNPJ
 browser.find_element_by_xpath('//*[@id="1_s_1_l_VIVO_Documento"]').click()
-
-browser.find_element_by_xpath('//*[@id="1_VIVO_Documento"]').send_keys('08661552605') 
-
+#Aba INSERIR CNPJ
+browser.find_element_by_xpath('//*[@id="1_VIVO_Documento"]').send_keys('59120493000146') 
+#Aba BOTAO IR
 browser.find_element_by_id('s_1_1_8_0_Ctrl').click()
+time.sleep(3)
+#LINK CADASTRO CLIENTE
+browser.find_element_by_xpath('/html/body/div[1]/div/div[5]/div/div[6]/div/div[1]/div/div[1]/div/div/form/span/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[2]/td[10]/a').click()
+#RESULTADO
+#EDIT PRIMEIRO NOME
+primeiroNome = browser.find_element_by_id('1_First_Name').get_attribute('value')
+#EDIT SOBRENOME
+sobrenome = browser.find_element_by_id('1_Last_Name').get_attribute('value')
+#EDIT CELULAR
+celular = browser.find_element_by_id('1_Cellular_Phone__').get_attribute('value')
+#EDIT FIXO
+telefoneFixo = browser.find_element_by_id('1_s_1_l_Work_Phone__').get_attribute('value')
+#EDIT EMAIL
+email = browser.find_element_by_id('1_s_1_l_Email_Address').get_attribute('value')
+#EDIT ENDERECO
+endereco = browser.find_element_by_name('s_3_1_160_0').get_attribute('value')
+#EDIT NUMERO
+enderecoNumero = browser.find_element_by_name('s_3_1_58_0').get_attribute('value')
+#EDIT COMPLEMENTO
+#complemento = browser.find_element_by_id('').get_attribute('value')
+#EDIT CEP
+cep = browser.find_element_by_name('s_3_1_195_0').get_attribute('value')
+
+name = ('C:/Chromedriver/' + 'SaidaTexto.txt')
+
+arquivo = open(name,'w')
+arquivo.write(primeiroNome)
+arquivo.write(sobrenome)
+arquivo.write(celular)
+arquivo.write(telefoneFixo)
+arquivo.write(email)
+arquivo.write(endereco)
+arquivo.write(enderecoNumero)
+arquivo.write(cep)
+arquivo.close

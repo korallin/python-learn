@@ -16,8 +16,6 @@ for i in range(len(path)-1,0,-1):
 		enderecoArquivo = path[:i+1]
 		break
 
-print(enderecoArquivo)		
-
 # convertendo em um array editável de numpy[x, y, CANALS]
 npimagem = np.asarray(imagem).astype(np.uint8)  
 
