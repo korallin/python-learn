@@ -35,11 +35,15 @@ browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd
 browser.submit()
 
 #browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=GotoView&SWEView=VIVO+Hierarquia+de+Contas&SWERF=1&SWEHo=vivocorp-parceiro.vivo.com.br&SWEBU=1#s_sctrl_tabView_noop')
-#Aba Contas
+#Sub Aba Contas
+print('/html/body/div[1]/div/div[4]/div/div/div[1]/div[1]/ul/li[3] 1 ')
 browser.find_element_by_xpath('/html/body/div[1]/div/div[4]/div/div/div[1]/div[1]/ul/li[3]').click()
+time.sleep(3)
 #Sub Aba Hierarquia
+print('/html/body/div[1]/div/div[4]/div/div/div[1]/div[2]/ul/li[3]') 
 browser.find_element_by_xpath('/html/body/div[1]/div/div[4]/div/div/div[1]/div[2]/ul/li[3]').click()
 #Aba Botao Pesquisar
+print('s_1_1_16_0_Ctrl')
 browser.find_element_by_id('s_1_1_16_0_Ctrl').click()
 #Aba Fiedl CNPJ
 browser.find_element_by_xpath('//*[@id="1_s_1_l_VIVO_Documento"]').click()
