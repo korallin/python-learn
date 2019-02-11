@@ -65,11 +65,11 @@ print(primeiroNome)
 sobrenome = browser.find_element_by_id('1_s_1_l_Last_Name').get_attribute('title')
 print(sobrenome)
 #EDIT CELULAR
-'''celular = browser.find_element_by_id('1_Cellular_Phone__').get_attribute('title')
+celular = browser.find_element_by_id('1_s_1_l_Cellular_Phone__').get_attribute('title')
 #EDIT FIXO
-telefoneFixo = browser.find_element_by_id('1_s_1_l_Work_Phone__').get_attribute('value')
+telefoneFixo = browser.find_element_by_id('1_s_1_l_Work_Phone__').get_attribute('title')
 #EDIT EMAIL
-email = browser.find_element_by_id('1_s_1_l_Email_Address').get_attribute('value')
+email = browser.find_element_by_id('1_s_1_l_Email_Address').get_attribute('title')
 #EDIT ENDERECO
 endereco = browser.find_element_by_name('s_3_1_160_0').get_attribute('value')
 #EDIT NUMERO
@@ -78,16 +78,16 @@ enderecoNumero = browser.find_element_by_name('s_3_1_58_0').get_attribute('value
 #complemento = browser.find_element_by_id('').get_attribute('value')
 #EDIT CEP
 cep = browser.find_element_by_name('s_3_1_195_0').get_attribute('value')
-'''
+
 name = ('C:/Chromedriver/' + 'SaidaTexto.txt')
 
 arquivo = open(name,'w')
-arquivo.write(primeiroNome)
-arquivo.write(sobrenome)
-arquivo.write(celular)
-arquivo.write(telefoneFixo)
-arquivo.write(email)
-arquivo.write(endereco)
-arquivo.write(enderecoNumero)
-arquivo.write(cep)
+arquivo.writelines(primeiroNome + '\n')
+arquivo.write(sobrenome + '\n')
+arquivo.write(celular + '\n')
+arquivo.write(telefoneFixo + '\n')
+arquivo.write(email + '\n')
+arquivo.write(endereco + '\n')
+arquivo.write(enderecoNumero + '\n')
+arquivo.write(cep + '\n')
 arquivo.close
