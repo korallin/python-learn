@@ -14,7 +14,7 @@ chave = (codigoProcesso[11:13] + codigoProcesso[:6])
 
 browser.find_element_by_xpath('/html/body/div[1]/main/div[1]/div[1]/div[2]/section[1]/div/div[1]/div/div[1]/form/div[6]/button').click()
 
-time.sleep(3)
+time.sleep(8)
 
 vara = browser.find_element_by_xpath('/html/body/table[2]/tbody/tr[2]/td[1]/b').text
 status = browser.find_element_by_xpath('/html/body/table[2]/tbody/tr[2]/td[2]/b').text 
@@ -57,7 +57,7 @@ arquivo.write(requerente + '\n')
 arquivo.write(requerido + '\n')
 
 for lista in tabela:
-    arquivo.write(lista + '\n')
+    arquivo.write(lista)
 
 arquivo.close
 	
