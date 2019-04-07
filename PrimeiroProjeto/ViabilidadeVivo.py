@@ -7,16 +7,19 @@ from selenium.webdriver.support import expected_conditions as EC
 
 browser = webdriver.Firefox()
 
+#80053926 - Stcbr@26; 80003010 - P@ssword12
+
 browser.get('http://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=GotoView&SWEView=VIVO+Contas+Detail+-+Contacts+View&SWERF=1&SWEHo=vivocorp-parceiro.vivo.com.br&SWEBU=1')
-browser.find_element_by_name('username').send_keys('80053926')
+browser.find_element_by_name('username').send_keys('80003010')
 time.sleep(3)
-browser.find_element_by_name('password').send_keys('Stcbr@26')
+browser.find_element_by_name('password').send_keys('P@ssword12')
 browser.find_element_by_class_name('button').submit()
 #browser.submit()
 #browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=GotoView&SWEView=VIVO+Hierarquia+de+Contas&SWERF=1&SWEHo=vivocorp-parceiro.vivo.com.br&SWEBU=1#s_sctrl_tabView_noop')
 #Aba Contas
+#Tempo de 70 para 130
 try:
-    WebDriverWait(browser,70).until(
+    WebDriverWait(browser,130).until(
         EC.visibility_of_element_located((By.XPATH,'/html/body/div[1]/div/div[4]/div/div/div[1]/div[2]/ul/li[3]')))
 #except WebDriverException:
 finally:

@@ -18,11 +18,15 @@ driver = (ini)
 browser = webdriver.Chrome(driver)
 
 browser.get('http://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=GotoView&SWEView=VIVO+Contas+Detail+-+Contacts+View&SWERF=1&SWEHo=vivocorp-parceiro.vivo.com.br&SWEBU=1')
-browser.find_element_by_name('username').send_keys('80053926')
+#browser.find_element_by_name('username').send_keys('80053926')
+#browser.find_element_by_name('username').send_keys('80003010')
+browser.find_element_by_name('username').send_keys(user)
 
 time.sleep(3)
 
-browser.find_element_by_name('password').send_keys('Stcbr@26')
+#browser.find_element_by_name('password').send_keys('Stcbr@26')
+#browser.find_element_by_name('password').send_keys('P@ssword12')
+browser.find_element_by_name('password').send_keys(passw)
 browser.find_element_by_class_name('button').click()
 '''
 time.sleep(3)
