@@ -57,7 +57,8 @@ browser.find_element_by_xpath('//*[@id="1_VIVO_Documento"]').send_keys('59120493
 browser.find_element_by_id('s_1_1_8_0_Ctrl').click()
 time.sleep(3)
 #LINK CADASTRO CLIENTE
-browser.find_element_by_xpath('/html/body/div[1]/div/div[5]/div/div[6]/div/div[1]/div/div[1]/div/div/form/span/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[2]/td[10]/a').click()
+#browser.find_element_by_xpath('/html/body/div[1]/div/div[5]/div/div[6]/div/div[1]/div/div[1]/div/div/form/span/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[2]/td[10]/a').click()
+browser.find_element_by_xpath('//*[@id="1_s_1_l_Parent_Account_Name"]').click()
 #RESULTADO
 #EDIT PRIMEIRO NOME
 primeiroNome = browser.find_element_by_id('1_First_Name').get_attribute('value')
