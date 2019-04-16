@@ -36,7 +36,7 @@ browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd
             '9DA1UWMaXfth22IJZurNPI4pt-MznBdEgdb4-bP1OzpLjdrkpB4EwtggLUo-zHRLtes5n4Ha74D1ztFDRHt7ahVu4Ywr0z'+
             'G96iYSk_&SRN=K1gekGBBjDd2PK6mmPP8IhvLCopcVSAuJZ10utLGhJ0b&SWETS=')
 '''
-browser.submit()
+#browser.submit()
 
 #browser.get('https://vivocorp-parceiro.vivo.com.br/vivocorp_oui/start.swe?SWECmd=GotoView&SWEView=VIVO+Hierarquia+de+Contas&SWERF=1&SWEHo=vivocorp-parceiro.vivo.com.br&SWEBU=1#s_sctrl_tabView_noop')
 #Sub Aba Contas
